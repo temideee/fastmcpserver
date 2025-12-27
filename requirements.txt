@@ -1,0 +1,9 @@
+fastmcp==2.14.0
+httpx==0.28.1
+python-dotenv==1.1.0
+
+# Azure
+azure-identity==1.25.1
+azure-mgmt-resourcegraph==8.0.1
+azure-mgmt-resource==24.0.0
+azure-mgmt-costmanagement==4.0.1
