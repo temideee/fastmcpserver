@@ -29,22 +29,6 @@ import re
 # MCP SERVER
 # ----------------------------
 
-def _require_api_key(ctx: Context) -> None:
-    """
-    Require callers to include x-api-key header matching MCP_API_KEY env var.
-    """
-    expected = os.environ.get("MCP_API_KEY")
-    if not expected:
-        raise PermissionError("Server misconfigured: MCP_API_KEY not set.")
-
-    req = getattr(ctx, "request", None)
-    if not req:
-        raise PermissionError("Missing request context.")
-
-    provided = req.headers.get("x-api-key")
-    if not provided or provided != expected:
-        raise PermissionError("Unauthorized: missing or invalid x-api-key.")
-
 mcp = FastMCP(
     name="AzureServiceNowMCPServer",
     instructions="""
