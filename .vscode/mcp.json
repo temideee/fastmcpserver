@@ -1,0 +1,8 @@
+{
+  "servers": {
+    "azure-servicenow-prod": {
+      "type": "http",
+      "url": "https://https://fastmcpdev.jollyglacier-63fc407e.canadacentral.azurecontainerapps.io/mcp"
+    }
+  }
+}
